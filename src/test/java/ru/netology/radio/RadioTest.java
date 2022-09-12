@@ -30,6 +30,18 @@ public class RadioTest {
     }
 
     @Test
+
+    public void shouldSetMaxStation() {
+        radio.setCurrentStation(20);
+        radio.nextStation();
+
+        int expected = 20;
+        int actual = radio.getMaxStation();
+
+        Assertions.assertEquals(expected,actual);
+    }
+
+    @Test
     public void shouldSetPrevStation() {
         radio.setCurrentStation(6);
 
